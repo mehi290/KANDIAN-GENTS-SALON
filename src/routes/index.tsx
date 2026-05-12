@@ -604,141 +604,114 @@ function Wonderstouch() {
       {/* HERO */}
       <section
         style={{
-          height: "100vh",
-          minHeight: 640,
+          minHeight: "100vh",
           position: "relative",
           overflow: "hidden",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=85)",
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: isMobile ? 140 : 160,
+          paddingBottom: isMobile ? 100 : 120,
         }}
       >
         <div
           style={{
             position: "absolute",
             inset: 0,
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&q=85)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+            animation: "ws-kenburns 22s ease-in-out infinite alternate",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
             background:
-              "linear-gradient(160deg, rgba(10,10,10,0.80) 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.82) 100%)",
+              "linear-gradient(180deg, rgba(10,10,10,0.78) 0%, rgba(10,10,10,0.45) 55%, rgba(10,10,10,0.88) 100%)",
           }}
         />
         <div
           style={{
             position: "relative",
             zIndex: 1,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            maxWidth: 760,
-            marginLeft: "clamp(40px, 8vw, 160px)",
-            paddingRight: 20,
+            width: "100%",
+            maxWidth: 640,
+            marginLeft: "clamp(24px, 8vw, 160px)",
+            paddingRight: 24,
           }}
         >
           <Reveal>
-            <div
-              style={{
-                fontSize: 11,
-                letterSpacing: "0.35em",
-                textTransform: "uppercase",
-                color: "#D4AF37",
-                fontFamily: "Inter",
-                fontWeight: 500,
-              }}
-            >
-              HAIRCUT • BEARD • SHAVE • GROOMING
-            </div>
             <h1
               className="bebas"
               style={{
-                fontSize: "clamp(60px, 10vw, 110px)",
+                fontSize: "clamp(48px, 8vw, 92px)",
                 color: "#fff",
                 lineHeight: 0.95,
-                margin: "20px 0 0",
+                margin: 0,
+                letterSpacing: "0.005em",
               }}
             >
               WHERE SHARP MEN GET SHARPER
             </h1>
-            <div
-              className="bebas"
-              style={{
-                fontSize: "clamp(24px, 3.5vw, 44px)",
-                color: "#D4AF37",
-                marginTop: 16,
-              }}
-            >
-              Dubai & Istanbul's Premier Barbershop
-            </div>
+          </Reveal>
+          <Reveal delay={120}>
             <p
               style={{
-                fontSize: 16,
+                fontSize: 17,
                 color: "#E8E0D5",
-                maxWidth: 480,
-                marginTop: 20,
+                maxWidth: 520,
+                marginTop: 24,
                 lineHeight: 1.7,
+                fontFamily: "Inter",
               }}
             >
-              Expert barbers, razor-edge precision, and a grooming lounge built for the modern man — in
-              the heart of two great cities.
+              <span style={{ color: "#D4AF37", fontWeight: 600 }}>
+                Dubai &amp; Istanbul's premier barbershop
+              </span>{" "}
+              — razor-edge precision for the modern man.
             </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 40, flexWrap: "wrap" }}>
+          </Reveal>
+          <Reveal delay={240}>
+            <div style={{ display: "flex", alignItems: "center", gap: 28, marginTop: 36, flexWrap: "wrap" }}>
               <GoldButton onClick={openBook}>BOOK YOUR CHAIR</GoldButton>
               <button
+                onClick={() => {
+                  document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 style={{
-                  padding: "14px 32px",
-                  fontSize: 11,
-                  fontFamily: "Inter",
-                  fontWeight: 600,
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
                   background: "transparent",
+                  border: "none",
                   color: "#fff",
-                  border: "1.5px solid rgba(255,255,255,0.65)",
-                  borderRadius: 2,
+                  fontFamily: "Inter",
+                  fontSize: 12,
+                  fontWeight: 600,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
                   cursor: "pointer",
-                  transition: "all 0.3s ease",
+                  padding: "4px 0",
+                  borderBottom: "1px solid rgba(212,175,55,0.6)",
                 }}
               >
-                EXPLORE SERVICES
+                Explore services →
               </button>
-            </div>
-            <div style={{ display: "flex", gap: 32, marginTop: 36, flexWrap: "wrap" }}>
-              {[
-                ["2", "CITIES"],
-                ["15+", "BARBERS"],
-                ["4.9 ★", "RATING"],
-              ].map(([n, l]) => (
-                <div key={l}>
-                  <div className="bebas" style={{ fontSize: 32, color: "#D4AF37" }}>
-                    {n}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 10,
-                      color: "#888",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.2em",
-                    }}
-                  >
-                    {l}
-                  </div>
-                </div>
-              ))}
             </div>
           </Reveal>
         </div>
         <div
           style={{
             position: "absolute",
-            bottom: 30,
+            bottom: 28,
             left: "50%",
             transform: "translateX(-50%)",
             animation: "ws-bounce 2s infinite",
             color: "#D4AF37",
+            opacity: 0.6,
             zIndex: 1,
           }}
         >
-          <ChevronDown size={28} />
+          <ChevronDown size={26} />
         </div>
       </section>
 
