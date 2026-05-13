@@ -517,10 +517,10 @@ function Wonderstouch() {
         }}
       >
         <div style={{ height: 85, marginLeft: 20 }}>
-          <img 
-            src="/wonderstouch logo.png" 
-            alt="Wonderstouch Logo" 
-            style={{ height: "100%", width: "auto", display: "block" }} 
+          <img
+            src="/wonderstouch logo.png"
+            alt="Wonderstouch Logo"
+            style={{ height: "100%", width: "auto", display: "block" }}
           />
         </div>
 
@@ -646,11 +646,11 @@ function Wonderstouch() {
                   }}
                 >
                   {SHOP_SUB.map((s) => (
-                    <div 
-                      key={s.name} 
-                      style={{ 
-                        fontSize: 14, 
-                        color: "#fff", 
+                    <div
+                      key={s.name}
+                      style={{
+                        fontSize: 14,
+                        color: "#fff",
                         padding: "8px 0",
                         cursor: "pointer",
                         transition: "color 0.2s"
@@ -731,10 +731,10 @@ function Wonderstouch() {
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <div style={{ height: 60 }}>
-                <img 
-                  src="/wonderstouch logo.png" 
-                  alt="Wonderstouch Logo" 
-                  style={{ height: "100%", width: "auto", display: "block" }} 
+                <img
+                  src="/wonderstouch logo.png"
+                  alt="Wonderstouch Logo"
+                  style={{ height: "100%", width: "auto", display: "block" }}
                 />
               </div>
               <button
@@ -913,7 +913,62 @@ function Wonderstouch() {
             </div>
           </Reveal>
         </div>
+      </section>
 
+      {/* AS SEEN ON MARQUEE */}
+      <section style={{ background: "#fff", padding: "80px 0", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: 50 }}>
+          <span style={{
+            fontSize: 28,
+            fontFamily: "Bebas Neue, sans-serif",
+            color: "#000",
+            fontWeight: 900,
+            letterSpacing: "0.05em",
+            textTransform: "uppercase"
+          }}>
+            AS SEEN ON
+          </span>
+        </div>
+
+        <style>
+          {`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .marquee-container {
+              display: flex;
+              width: max-content;
+              animation: marquee 30s linear infinite;
+            }
+            .marquee-item {
+              flex: 0 0 auto;
+              margin: 0 60px;
+              display: flex;
+              alignItems: center;
+              filter: opacity(1);
+              transition: all 0.4s ease;
+            }
+            .marquee-item:hover {
+              transform: scale(1.05);
+            }
+          `}
+        </style>
+
+        <div className="marquee-container">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "center" }}>
+              <div className="marquee-item" style={{ fontSize: 44, color: "#000", fontWeight: 900, fontFamily: "serif" }}>CN Traveler</div>
+              <div className="marquee-item" style={{ fontSize: 48, color: "#000", fontWeight: 900, fontFamily: "Bebas Neue, sans-serif" }}>GQ</div>
+              <div className="marquee-item" style={{ fontSize: 44, color: "#000", fontWeight: 900, fontFamily: "serif" }}>Esquire</div>
+              <div className="marquee-item" style={{ fontSize: 48, color: "#000", fontWeight: 900, fontFamily: "Bebas Neue, sans-serif" }}>VOGUE</div>
+              <div className="marquee-item" style={{ fontSize: 48, color: "#000", fontWeight: 900, fontFamily: "serif" }}>Forbes</div>
+              <div className="marquee-item" style={{ fontSize: 52, color: "#000", fontWeight: 900, fontFamily: "serif" }}>CEO</div>
+              <div className="marquee-item" style={{ fontSize: 40, color: "#000", fontWeight: 900, fontFamily: "serif" }}>Harper's BAZAAR</div>
+              <div className="marquee-item" style={{ fontSize: 44, color: "#000", fontWeight: 900, fontFamily: "Bebas Neue, sans-serif" }}>MEN'S HEALTH</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* GOLD STATS BAR */}
