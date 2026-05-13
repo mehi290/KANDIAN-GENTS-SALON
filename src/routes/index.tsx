@@ -18,6 +18,7 @@ import {
   ArrowRight,
   ChevronRight,
   ChevronLeft,
+  Quote,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -172,12 +173,12 @@ const SERVICES = [
 ];
 
 const GALLERY = [
-  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&q=80",
-  "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80",
-  "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=500&q=80",
-  "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=500&q=80",
-  "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=500&q=80",
-  "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80",
+  "/men%20hair%20style.mp4",
+  "/men%20hair%20braid.jpeg",
+  "/hair%20perm%20men.mp4",
+  "/men%20hair%20color.mp4",
+  "/our%20work.mp4",
+  "/heromen.mp4",
 ];
 
 const REVIEWS = [
@@ -897,7 +898,7 @@ function Wonderstouch() {
             objectFit: "cover",
           }}
         >
-          <source src="/main hero.mp4" type="video/mp4" />
+          <source src="/heromen.mp4" type="video/mp4" />
         </video>
         <div
           style={{
@@ -1186,35 +1187,16 @@ function Wonderstouch() {
         </div>
       </section>
 
-      <section style={{ background: "#D4AF37", padding: "40px 0 30px", textAlign: "center" }}>
+      <section style={{ background: "#111", padding: "60px 0 100px", position: "relative" }}>
         <div className="ws-container">
-          <h2 className="bebas" style={{ fontSize: "clamp(28px, 4vw, 42px)", color: "#111", marginBottom: 10 }}>
-            What Our Customers Say
-          </h2>
-          <p style={{ color: "#333", fontSize: 14, maxWidth: 700, margin: "0 auto", lineHeight: 1.5 }}>
-            With 100+ Google Reviews and a 4.6 rating our professional barbers guarantee unmatched
-            satisfaction in every haircut, beard trimming, and men's facial service.
-          </p>
-        </div>
-      </section>
-
-      <section style={{ background: "#F0F2F5", padding: "60px 0 100px", position: "relative" }}>
-        <div className="ws-container">
-          {/* Summary Card */}
-          <div style={{
-            background: "#fff", borderRadius: "20px", padding: "20px 30px", marginBottom: 40,
-            display: "flex", flexDirection: "column", gap: 5, boxShadow: "0 2px 10px rgba(0,0,0,0.05)"
-          }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#333" }}>Wonderstouch - Best Men's Barbershop in Dubai</div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <span style={{ fontSize: 18, fontWeight: "bold" }}>4.6</span>
-              <div style={{ display: "flex", gap: 2 }}>
-                {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#FFB400" color="#FFB400" />)}
-              </div>
-            </div>
-            <div style={{ fontSize: 13, color: "#666" }}>
-              135 reviews on <span style={{ color: "#4285F4", fontWeight: "bold" }}>G</span><span style={{ color: "#EA4335", fontWeight: "bold" }}>o</span><span style={{ color: "#FBBC05", fontWeight: "bold" }}>o</span><span style={{ color: "#4285F4", fontWeight: "bold" }}>g</span><span style={{ color: "#34A853", fontWeight: "bold" }}>l</span><span style={{ color: "#EA4335", fontWeight: "bold" }}>e</span>
-            </div>
+          <div style={{ textAlign: "center", marginBottom: 60 }}>
+            <h2 className="bebas" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "#fff", marginBottom: 15 }}>
+              Clients Love
+            </h2>
+            <div style={{ width: 60, height: 2, background: "#D4AF37", margin: "0 auto 20px" }} />
+            <p style={{ color: "#888", fontSize: 15, maxWidth: 700, margin: "0 auto", lineHeight: 1.6 }}>
+              With 100+ Google Reviews and a 4.6 rating our professional barbers guarantee unmatched
+              satisfaction in every service. Here's what our guys say.  </p>
           </div>
 
           {/* Reviews Carousel */}
@@ -1222,87 +1204,96 @@ function Wonderstouch() {
             <button
               onClick={() => {
                 const el = document.getElementById("reviews-scroll");
-                if (el) el.scrollBy({ left: -350, behavior: "smooth" });
+                if (el) el.scrollBy({ left: -400, behavior: "smooth" });
               }}
               style={{
-                position: "absolute", left: -25, top: "50%", transform: "translateY(-50%)", zIndex: 5,
-                width: 50, height: 50, borderRadius: "50%", border: "none", background: "#fff",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer"
+                position: "absolute", left: isMobile ? -10 : -40, top: "50%", transform: "translateY(-50%)", zIndex: 5,
+                width: 40, height: 40, borderRadius: "50%", border: "1px solid #333", background: "rgba(0,0,0,0.5)",
+                display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#fff"
               }}
             >
-              <ChevronLeft size={24} color="#666" />
+              <ChevronLeft size={20} />
             </button>
 
             <button
               onClick={() => {
                 const el = document.getElementById("reviews-scroll");
-                if (el) el.scrollBy({ left: 350, behavior: "smooth" });
+                if (el) el.scrollBy({ left: 400, behavior: "smooth" });
               }}
               style={{
-                position: "absolute", right: -25, top: "50%", transform: "translateY(-50%)", zIndex: 5,
-                width: 50, height: 50, borderRadius: "50%", border: "none", background: "#fff",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer"
+                position: "absolute", right: isMobile ? -10 : -40, top: "50%", transform: "translateY(-50%)", zIndex: 5,
+                width: 40, height: 40, borderRadius: "50%", border: "1px solid #333", background: "rgba(0,0,0,0.5)",
+                display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#fff"
               }}
             >
-              <ChevronRight size={24} color="#666" />
+              <ChevronRight size={20} />
             </button>
 
             <div
               id="reviews-scroll"
               style={{
-                display: "flex", gap: 20, overflowX: "hidden", padding: "10px 0",
+                display: "flex", gap: 30, overflowX: "hidden", padding: "20px 0",
                 scrollBehavior: "smooth"
               }}
             >
               {[
-                { name: "Gujjar Badsha", initial: "G", color: "#004D40", text: "Best experience ever, the staff is very professional and the atmosphere is great." },
-                { name: "Sufaid cherumoth", initial: "S", color: "#333", text: "Highly recommended for anyone looking for a precision cut in Dubai." },
-                { name: "Frank Lin", initial: "F", color: "#E91E63", text: "Great experience with Davido. He really knows how to style according to face shape." },
-                { name: "Ahmed Khan", initial: "A", color: "#3F51B5", text: "The best skin fade I've had in years. Istanbul branch is top notch." },
-                { name: "James Wilson", initial: "J", color: "#FF5722", text: "Premium products and excellent service. Worth every dirham." }
+                { name: "Gujjar Badsha", initial: "G", location: "Business Bay, Dubai", text: "Best experience ever, the staff is very professional and the atmosphere is great." },
+                { name: "Sufaid cherumoth", initial: "S", location: "DIFC, Dubai", text: "Highly recommended for anyone looking for a precision cut in Dubai." },
+                { name: "Frank Lin", initial: "F", location: "Umm Al Sheif, Dubai", text: "Great experience with Davido. He really knows how to style according to face shape." },
+                { name: "Ahmed Khan", initial: "A", location: "Elgün Sokağı, Istanbul", text: "The best skin fade I've had in years. Istanbul branch is top notch." },
+                { name: "James Wilson", initial: "J", location: "Sheikh Zayed Rd, Dubai", text: "Premium products and excellent service. Worth every dirham." }
               ].map((rev, idx) => (
                 <div key={idx} style={{
-                  flex: "0 0 350px", background: "#fff", borderRadius: "15px", padding: "25px",
-                  display: "flex", flexDirection: "column", gap: 15, boxShadow: "0 4px 15px rgba(0,0,0,0.05)"
+                  flex: isMobile ? "0 0 85%" : "0 0 380px", background: "#1A1A1A", padding: "40px",
+                  display: "flex", flexDirection: "column", gap: 25, borderTop: "4px solid #D4AF37",
+                  position: "relative"
                 }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                    <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-                      <div style={{
-                        width: 45, height: 45, borderRadius: "50%", background: rev.color,
-                        display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: "bold"
-                      }}>
-                        {rev.initial}
-                      </div>
-                      <div>
-                        <div style={{ fontSize: 15, fontWeight: 600, color: "#333" }}>{rev.name}</div>
-                        <div style={{ fontSize: 12, color: "#999" }}>2 months ago</div>
-                      </div>
-                    </div>
-                    <div style={{ color: "#4285F4", fontWeight: "bold", fontSize: 18 }}>G</div>
+                  <div style={{ display: "flex", gap: 4, marginBottom: -10 }}>
+                    {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" color="#D4AF37" />)}
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-                    <div style={{ display: "flex", gap: 2 }}>
-                      {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFB400" color="#FFB400" />)}
-                    </div>
-                    <div style={{
-                      width: 16, height: 16, borderRadius: "50%", background: "#4285F4",
-                      display: "flex", alignItems: "center", justifyContent: "center"
-                    }}>
-                      <div style={{ borderBottom: "2px solid #fff", borderRight: "2px solid #fff", width: 4, height: 8, transform: "rotate(45deg)", marginTop: -2 }}></div>
-                    </div>
-                  </div>
-                  <p style={{ fontSize: 14, color: "#555", lineHeight: 1.6, margin: 0 }}>
-                    {rev.text}
+                  <Quote size={32} color="#D4AF37" style={{ opacity: 0.8 }} />
+                  <p style={{
+                    fontSize: 16, color: "#eee", lineHeight: 1.8, margin: 0,
+                    fontStyle: "italic", fontWeight: 300
+                  }}>
+                    "{rev.text}"
                   </p>
+                  <div style={{ marginTop: "auto", display: "flex", gap: 15, alignItems: "center" }}>
+                    <div style={{
+                      width: 40, height: 40, borderRadius: "50%", background: "#D4AF37",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      color: "#000", fontWeight: "bold", fontSize: 14
+                    }}>
+                      {rev.initial}
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 15, fontWeight: 600, color: "#fff" }}>{rev.name}</div>
+                      <div style={{ fontSize: 12, color: "#666" }}>
+                        {rev.location} • Google Reviews
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
+          </div>
+          
+          <div style={{ 
+            display: "flex", alignItems: "center", justifyContent: "center", 
+            gap: isMobile ? 15 : 40, marginTop: 50, color: "#D4AF37",
+            fontSize: isMobile ? 10 : 13, fontWeight: 700, letterSpacing: "0.2em"
+          }}>
+            <span>4.9 / 5 ON GOOGLE</span>
+            <span style={{ fontSize: 10 }}>♦</span>
+            <span>1,000+ MEN SERVED</span>
+            <span style={{ fontSize: 10 }}>♦</span>
+            <span>2 CITIES</span>
           </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D" }}>
+      <section id="about" className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D", padding: "80px 0 20px" }}>
         <div className="ws-container">
           <Reveal>
             <div
@@ -1315,28 +1306,27 @@ function Wonderstouch() {
             >
               {isMobile && (
                 <img
-                  src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80"
+                  src="/about%20image.jpeg"
                   alt="Barber at work"
                   style={{ width: "100%", height: 300, objectFit: "cover" }}
                 />
               )}
               <div>
-                <div className="eyebrow">WHO WE ARE</div>
                 <h2
                   className="bebas"
                   style={{
-                    fontSize: "clamp(40px, 5vw, 64px)",
+                    fontSize: "clamp(32px, 4vw, 48px)",
                     color: "#111",
-                    margin: "16px 0 28px",
+                    margin: "0 0 20px",
                     lineHeight: 1,
                   }}
                 >
-                  A BARBERSHOP BUILT FOR THE MODERN MAN
+                  About wonderstouch
                 </h2>
                 {[
-                  "Wonderstouch was born from one belief: every man deserves a great cut and a great experience. With locations in Umm Al Sheif, Dubai and Elgün Sokağı, Istanbul, we've built a two-city brotherhood of loyal clients who come back not just for the results — but for the ritual.",
-                  "Our 15+ internationally trained barbers specialise in precision fades, skin fades, scissor cuts, classic hot towel shaves, beard sculpting, and full grooming rituals. We use only premium men's grooming products — American Crew, Layrite, Proraso, and Wahl Professional — because your routine deserves nothing less.",
-                  "Whether you're a Dubai regular, an Istanbul local, or a man travelling between cities — walk in, sit down, and leave looking your sharpest. No fuss. Just craft.",
+                  "Wonderstouch wasn’t built to be just another barbershop, it was built to be yours.",
+                  "Two cities. Dubai & Istanbul. 15+ internationally trained barbers. One standard: leave looking your sharpest.",
+                  "Walk in. Sit down. Leave sharp.",
                 ].map((p, i) => (
                   <p
                     key={i}
@@ -1344,14 +1334,14 @@ function Wonderstouch() {
                       fontSize: 15,
                       color: "#3D3D3D",
                       lineHeight: 1.85,
-                      margin: "0 0 18px",
+                      margin: "0 0 14px",
                     }}
                   >
                     {p}
                   </p>
                 ))}
-                <hr style={{ border: "none", borderTop: "1px solid #D4AF37", margin: "30px 0" }} />
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 25 }}>
                   {[
                     "✦ Walk-ins Welcome",
                     "✦ Premium Men's Products",
@@ -1366,7 +1356,7 @@ function Wonderstouch() {
                         fontSize: 10,
                         textTransform: "uppercase",
                         letterSpacing: "0.2em",
-                        fontWeight: 500,
+                        fontWeight: "bold",
                       }}
                     >
                       {t}
@@ -1374,19 +1364,17 @@ function Wonderstouch() {
                   ))}
                 </div>
               </div>
-              {!isMobile && (
-                <img
-                  src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80"
-                  alt="Barber at work"
-                  style={{
-                    width: "100%",
-                    height: 540,
-                    objectFit: "cover",
-                    outline: "1px solid #D4AF37",
-                    outlineOffset: 14,
-                  }}
-                />
-              )}
+              <img
+                src="/about%20image.jpeg"
+                alt="About Wonderstouch"
+                style={{
+                  width: "100%",
+                  height: isMobile ? 300 : 540,
+                  objectFit: "cover",
+                  outline: "1px solid #D4AF37",
+                  outlineOffset: isMobile ? 10 : 14,
+                }}
+              />
             </div>
           </Reveal>
         </div>
@@ -1394,21 +1382,20 @@ function Wonderstouch() {
 
 
       {/* GALLERY */}
-      <section className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D" }}>
+      <section className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D", padding: "40px 0 100px" }}>
         <div className="ws-container">
           <Reveal>
-            <div style={{ textAlign: "center", marginBottom: 50 }}>
-              <div className="eyebrow">OUR WORK</div>
-              <h2
-                className="bebas"
-                style={{
-                  fontSize: "clamp(36px, 5vw, 68px)",
-                  color: "#111",
-                  margin: "16px 0",
-                }}
-              >
-                THE CUTS SPEAK FOR THEMSELVES
-              </h2>
+            <div style={{ textAlign: "center", marginBottom: 30 }}>
+                <h2
+                  className="bebas"
+                  style={{
+                    fontSize: "clamp(32px, 4vw, 48px)",
+                    color: "#111",
+                    margin: 0,
+                  }}
+                >
+                  THE CUTS SPEAK FOR THEMSELVES
+                </h2>
             </div>
           </Reveal>
           <div
@@ -1417,27 +1404,45 @@ function Wonderstouch() {
               columnGap: 10,
             }}
           >
-            {GALLERY.map((src, i) => (
-              <div
-                key={i}
-                className="gallery-item"
-                style={{
-                  breakInside: "avoid",
-                  marginBottom: 10,
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  className="gallery-img"
-                  src={src}
-                  alt={`Gallery ${i + 1}`}
+            {GALLERY.map((src, i) => {
+              const isVideo = src.toLowerCase().endsWith(".mp4");
+              return (
+                <div
+                  key={i}
+                  className="gallery-item"
                   style={{
-                    width: "100%",
-                    display: "block",
-                    transition: "transform 0.3s ease",
+                    breakInside: "avoid",
+                    marginBottom: 10,
+                    position: "relative",
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  {isVideo ? (
+                    <video
+                      className="gallery-img"
+                      src={src}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        transition: "transform 0.3s ease",
+                      }}
+                    />
+                  ) : (
+                    <img
+                      className="gallery-img"
+                      src={src}
+                      alt={`Gallery ${i + 1}`}
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        transition: "transform 0.3s ease",
+                      }}
+                    />
+                  )}
                 <div
                   className="gallery-overlay"
                   style={{
@@ -1453,8 +1458,9 @@ function Wonderstouch() {
                 >
                   <ZoomIn size={32} color="#fff" />
                 </div>
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
           <div
             style={{
@@ -1475,230 +1481,10 @@ function Wonderstouch() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section className="ws-section" style={{ background: "#111111" }}>
-        <div className="ws-container">
-          <Reveal>
-            <div style={{ textAlign: "center", marginBottom: 50 }}>
-              <div className="eyebrow">CLIENT LOVE</div>
-              <h2
-                className="bebas"
-                style={{
-                  fontSize: "clamp(36px, 5vw, 68px)",
-                  color: "#fff",
-                  margin: "16px 0 14px",
-                }}
-              >
-                OVER 1,000 FIVE-STAR REVIEWS
-              </h2>
-              <p style={{ fontSize: 15, color: "#E8E0D5" }}>
-                Two cities, one standard. Here's what our guys say.
-              </p>
-            </div>
-          </Reveal>
-          <div style={{ position: "relative", minHeight: 380 }}>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={reviewIdx}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.5 }}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
-                  gap: 24,
-                }}
-              >
-                {(isMobile ? [REVIEWS[reviewIdx]] : REVIEWS).map((r, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      background: "#1A1A1A",
-                      padding: "40px 36px",
-                      borderTop: "3px solid #D4AF37",
-                    }}
-                  >
-                    <div style={{ display: "flex", gap: 4, marginBottom: 16 }}>
-                      {Array.from({ length: 5 }).map((_, j) => (
-                        <Star key={j} size={14} fill="#D4AF37" color="#D4AF37" />
-                      ))}
-                    </div>
-                    <div className="bebas" style={{ fontSize: 52, color: "#D4AF37", lineHeight: 0.6 }}>
-                      ❝
-                    </div>
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                        fontSize: 17,
-                        color: "#fff",
-                        lineHeight: 1.75,
-                        margin: "16px 0 28px",
-                      }}
-                    >
-                      {r.quote}
-                    </p>
-                    <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                      <div
-                        style={{
-                          width: 36,
-                          height: 36,
-                          borderRadius: "50%",
-                          background: "#D4AF37",
-                          color: "#fff",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontWeight: 700,
-                          fontSize: 14,
-                        }}
-                      >
-                        {r.initial}
-                      </div>
-                      <div>
-                        <div style={{ fontSize: 14, color: "#fff", fontWeight: 500 }}>{r.name}</div>
-                        <div style={{ fontSize: 11, color: "#888" }}>
-                          {r.where} • ★ Google Reviews
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          <div
-            style={{ display: "flex", justifyContent: "center", gap: 10, marginTop: 32 }}
-          >
-            {REVIEWS.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setReviewIdx(i)}
-                style={{
-                  width: 10,
-                  height: 10,
-                  borderRadius: "50%",
-                  background: reviewIdx === i ? "#D4AF37" : "#333",
-                  border: "none",
-                  cursor: "pointer",
-                  padding: 0,
-                  transition: "all 0.3s ease",
-                }}
-                aria-label={`Review ${i + 1}`}
-              />
-            ))}
-          </div>
-          <div
-            style={{
-              marginTop: 40,
-              display: "flex",
-              justifyContent: "center",
-              gap: 24,
-              flexWrap: "wrap",
-              fontSize: 12,
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#E8E0D5",
-            }}
-          >
-            <span>4.9 / 5 on Google</span>
-            <span style={{ color: "#D4AF37" }}>◆</span>
-            <span>1,000+ Men Served</span>
-            <span style={{ color: "#D4AF37" }}>◆</span>
-            <span>2 Cities</span>
-          </div>
-        </div>
-      </section>
 
-      {/* BARBERS */}
-      <section className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D" }}>
-        <div className="ws-container">
-          <Reveal>
-            <div style={{ textAlign: "center", marginBottom: 60 }}>
-              <div className="eyebrow">OUR BARBERS</div>
-              <h2
-                className="bebas"
-                style={{
-                  fontSize: "clamp(36px, 5vw, 68px)",
-                  color: "#111",
-                  margin: "16px 0 14px",
-                }}
-              >
-                SKILLED. SHARP. HERE FOR YOU.
-              </h2>
-              <p style={{ fontSize: 15, color: "#3D3D3D", maxWidth: 640, margin: "0 auto" }}>
-                Every Wonderstouch barber is internationally trained and hand-picked for their craft,
-                precision, and dedication to the trade.
-              </p>
-            </div>
-          </Reveal>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: isMobile
-                ? "1fr"
-                : `repeat(${typeof window !== "undefined" && window.innerWidth < 1024 ? 2 : 4}, 1fr)`,
-              gap: 36,
-            }}
-          >
-            {BARBERS.map((b) => (
-              <Reveal key={b.name}>
-                <div style={{ textAlign: "left" }}>
-                  <div className="barber-img-wrap" style={{ display: "inline-block" }}>
-                    <img
-                      src={b.img}
-                      alt={b.name}
-                      style={{
-                        width: 220,
-                        height: 220,
-                        objectFit: "cover",
-                        display: "block",
-                        transition: "outline 0.3s ease",
-                      }}
-                    />
-                  </div>
-                  <div className="bebas" style={{ fontSize: 26, color: "#111", marginTop: 18 }}>
-                    {b.name}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 10,
-                      color: "#D4AF37",
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      fontWeight: 600,
-                      marginTop: 4,
-                    }}
-                  >
-                    {b.title}
-                  </div>
-                  <p style={{ fontSize: 13, color: "#888", margin: "12px 0", lineHeight: 1.7 }}>
-                    {b.bio}
-                  </p>
-                  <a
-                    style={{
-                      fontSize: 12,
-                      color: "#D4AF37",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.18em",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                    }}
-                  >
-                    Book with {b.name} →
-                  </a>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: 50 }}>
-            <GoldButton outlined>MEET THE FULL TEAM →</GoldButton>
-          </div>
-        </div>
-      </section>
 
       {/* PRICING */}
-      <section id="pricing" className="ws-section" style={{ background: "#111111" }}>
+      <section id="pricing" className="ws-section" style={{ background: "#111111", padding: "60px 0 100px" }}>
         <div className="ws-container">
           <Reveal>
             <div style={{ textAlign: "center", marginBottom: 40 }}>
