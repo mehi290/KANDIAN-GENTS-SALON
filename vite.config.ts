@@ -7,4 +7,5 @@ export default defineConfig({
     },
     deploymentTarget: "vercel",
   },
+  cloudflare: false,
 });
