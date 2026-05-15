@@ -112,36 +112,16 @@ const PRICE_LIST_SUB = [
 
 
 const SERVICES = [
-  {
-    name: "Haircut & Styling",
-    img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
-    desc: "Precision haircuts and beards in the heart of Ajman. Experience the VYNE standard. From AED 60.",
-  },
-  {
-    name: "Beard Trim & Sculpting",
-    img: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
-    desc: "Expert beard shaping, lining, and hot-oil conditioning. Clean lines, every time. From AED 40.",
-  },
-  {
-    name: "Classic Hot Towel Shave",
-    img: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80",
-    desc: "Traditional straight-razor shave with steamed towel, pre-shave oil, and cooling balm. From AED 80.",
-  },
-  {
-    name: "Hair & Beard Colour",
-    img: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80",
-    desc: "Grey blending, full colour, and beard tints. Discreet, natural results. From AED 120.",
-  },
-  {
-    name: "Men's Grooming Packages",
-    img: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
-    desc: "Cut + beard + hot towel shave combo packages. Ajman from AED 150.",
-  },
-  {
-    name: "Scalp & Hair Treatments",
-    img: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80",
-    desc: "Anti-dandruff, hydration, and hair-growth treatments for a healthy scalp. From AED 90.",
-  },
+  { name: "Hair Cut", desc: "Precision haircuts and beards in the heart of Ajman." },
+  { name: "Kids Hair Cut", desc: "Special attention for our younger gentlemen." },
+  { name: "Beard Trimming", desc: "Expert beard shaping, lining, and conditioning." },
+  { name: "Hair Perm & Styling", desc: "Modern textures and styling for men." },
+  { name: "Grooming Packages", desc: "Cut + beard + hot towel shave combo packages." },
+  { name: "Manicure", desc: "Complete hand grooming for men." },
+  { name: "Pedicure", desc: "Relaxing foot treatment and grooming." },
+  { name: "Facial Treatment", desc: "Rejuvenating skin treatments." },
+  { name: "Classic Hot Towel Shave", desc: "Traditional straight-razor shave experience." },
+  { name: "Scalp & Hair Treatments", desc: "Health-focused treatments for hair and scalp." },
 ];
 
 const GALLERY = [
@@ -391,6 +371,7 @@ function VyneBarbershop() {
 
   const [reviewIdx, setReviewIdx] = useState(0);
   const [bookOpen, setBookOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
@@ -490,7 +471,10 @@ function VyneBarbershop() {
 
   const loc = LOCATIONS[location];
 
-  const openBook = () => setBookOpen(true);
+  const openBook = (serviceName?: string) => {
+    setSelectedService(serviceName || null);
+    setBookOpen(true);
+  };
 
   return (
     <div style={{ background: "#111111", color: "#E8E0D5", overflowX: "hidden" }}>
@@ -566,6 +550,10 @@ function VyneBarbershop() {
                   {SUB_SERVICES.map((s) => (
                     <div key={s.name} style={{ marginBottom: 15 }}>
                       <div
+                        onClick={() => {
+                          document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+                          setActiveDropdown(null);
+                        }}
                         style={{
                           fontSize: 13,
                           color: "#fff",
@@ -574,13 +562,24 @@ function VyneBarbershop() {
                           marginBottom: s.sub ? 8 : 0,
                           cursor: "pointer"
                         }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"}
+                        onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
                       >
                         {s.name}
                       </div>
                       {s.sub && (
                         <div style={{ paddingLeft: 12, display: "flex", flexDirection: "column", gap: 6 }}>
                           {s.sub.map((sub) => (
-                            <div key={sub} style={{ fontSize: 11, color: "#888", cursor: "pointer", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"} onMouseLeave={(e) => e.currentTarget.style.color = "#888"}>
+                            <div
+                              key={sub}
+                              onClick={() => {
+                                document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+                                setActiveDropdown(null);
+                              }}
+                              style={{ fontSize: 11, color: "#888", cursor: "pointer", transition: "color 0.2s" }}
+                              onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"}
+                              onMouseLeave={(e) => e.currentTarget.style.color = "#888"}
+                            >
                               {sub}
                             </div>
                           ))}
@@ -609,6 +608,10 @@ function VyneBarbershop() {
                   {PRICE_LIST_SUB.map((s) => (
                     <div
                       key={s.name}
+                      onClick={() => {
+                        document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+                        setActiveDropdown(null);
+                      }}
                       style={{
                         fontSize: 14,
                         color: "#fff",
@@ -972,7 +975,7 @@ function VyneBarbershop() {
           ))}
         </div>
       </section>
-      <section style={{ background: "#FDFCFB", padding: "60px 0", position: "relative", overflow: "hidden" }}>
+      <section id="services" style={{ background: "#FDFCFB", padding: "60px 0", position: "relative", overflow: "hidden" }}>
         <div className="ws-container" style={{ marginBottom: 30 }}>
           <h2 className="bebas" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "#111", margin: 0 }}>
             PREMIUM SERVICES
@@ -1095,7 +1098,7 @@ function VyneBarbershop() {
                   <div className="service-content">
                     <h3 className="bebas" style={{ fontSize: 32, color: "#fff", margin: "0 0 15px" }}>{s.name}</h3>
                     <button
-                      onClick={openBook}
+                      onClick={() => openBook(s.name)}
                       style={{
                         background: "#D4AF37",
                         color: "#fff",
@@ -1985,9 +1988,13 @@ function VyneBarbershop() {
       {/* BOOKING MODAL */}
       <BookingModal
         open={bookOpen}
-        onClose={() => setBookOpen(false)}
+        onClose={() => {
+          setBookOpen(false);
+          setSelectedService(null);
+        }}
         location={location}
         setLocation={setLocation}
+        initialService={selectedService}
       />
     </div>
   );
@@ -1998,11 +2005,13 @@ function BookingModal({
   onClose,
   location,
   setLocation,
+  initialService,
 }: {
   open: boolean;
   onClose: () => void;
   location: LocationKey;
   setLocation: (l: LocationKey) => void;
+  initialService?: string | null;
 }) {
   const [step, setStep] = useState(0);
   const [service, setService] = useState<string | null>(null);
@@ -2013,7 +2022,14 @@ function BookingModal({
   const [phone, setPhone] = useState("");
 
   useEffect(() => {
-    if (!open) {
+    if (open) {
+      if (initialService) {
+        setService(initialService);
+        // Maybe jump to step 1 (barber)? 
+        // User said "PEDICURE HAS TO COME AND OTHER SERVICES BELOW CAN BE LISTED"
+        // So we stay on step 0 but with it selected.
+      }
+    } else {
       setTimeout(() => {
         setStep(0);
         setService(null);
@@ -2024,7 +2040,7 @@ function BookingModal({
         setPhone("");
       }, 300);
     }
-  }, [open]);
+  }, [open, initialService]);
 
   const next = () => setStep((s) => s + 1);
   const back = () => setStep((s) => Math.max(0, s - 1));
