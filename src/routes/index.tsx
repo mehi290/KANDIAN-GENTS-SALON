@@ -1433,7 +1433,10 @@ function VyneBarbershop() {
               );
             })}
           </div>
-          <div
+          <a
+            href="https://www.instagram.com/vynesalon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -1442,13 +1445,17 @@ function VyneBarbershop() {
               marginTop: 40,
               fontSize: 13,
               color: "#888",
+              textDecoration: "none",
+              transition: "opacity 0.3s"
             }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = "0.8"}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
           >
             <Instagram size={18} color="#D4AF37" />
             <span>Follow our work on Instagram</span>
-            <span style={{ color: "#D4AF37", fontWeight: 600 }}>@vyne-barbershop</span>
+            <span style={{ color: "#D4AF37", fontWeight: 600 }}>@vynesalon</span>
             <ArrowRight size={14} color="#D4AF37" />
-          </div>
+          </a>
         </div>
       </section>
 
