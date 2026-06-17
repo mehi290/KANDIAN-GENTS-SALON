@@ -961,7 +961,7 @@ function RazorKingsSalon() {
         >
           {[
             ["15+", "Expert Barbers"],
-            ["79+", "Happy Clients"],
+            ["63+", "Happy Clients"],
             ["4.9 ★", "Google Rating"],
           ].map(([n, l], i) => (
             <div
@@ -1156,7 +1156,7 @@ function RazorKingsSalon() {
             </h2>
             <div style={{ width: 60, height: 2, background: "#D4AF37", margin: "0 auto 20px" }} />
             <p style={{ color: "#888", fontSize: 15, maxWidth: 700, margin: "0 auto", lineHeight: 1.6 }}>
-              With 79 Google Reviews and a 4.9 rating our professional barbers guarantee unmatched
+              With 63 Google Reviews and a 4.9 rating our professional barbers guarantee unmatched
               satisfaction in every service. Here's what our guys say.  </p>
           </div>
 
