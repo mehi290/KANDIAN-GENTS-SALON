@@ -22,14 +22,14 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
-  component: HashtagBarbers,
+  component: KandianGentsSalon,
   head: () => ({
     meta: [
-      { title: "Hashtag Barbers" },
+      { title: "KANDIAN GENTS SALON" },
       {
         name: "description",
         content:
-          "Premium salon in Dubai offering modern cuts, grooming, and professional barber services.",
+          "Premium salon offering modern cuts, grooming, and professional barber services.",
       },
     ],
   }),
@@ -68,14 +68,14 @@ const LOCATIONS: Record<
 > = {
   ajman: {
     flag: "🇦🇪",
-    label: "DUBAI MARINA",
-    address: "Dubai Marina Sail Tower - Shop #1 - Dubai Marina - Dubai",
-    phone: "0552759341",
-    whatsapp: "+971552759341",
+    label: "AL KARAMA",
+    address: "Al Khazna Centre - Al Karama - Dubai",
+    phone: "0557204456",
+    whatsapp: "+971557204456",
     hours: "Sat–Thu: 9:00 AM – 10:00 PM  •  Fri: 2:00 PM – 10:00 PM",
     currency: "AED",
-    mapLabel: "Dubai Marina, Dubai",
-    mapSearchQuery: "Dubai Marina Sail Tower - Shop #1 - Dubai Marina - Dubai",
+    mapLabel: "Al Karama, Dubai",
+    mapSearchQuery: "Al Khazna Centre - Al Karama - Dubai",
     mapZoom: 14,
   },
 };
@@ -112,7 +112,7 @@ const PRICE_LIST_SUB = [
 
 
 const SERVICES = [
-  { name: "Hair Cut", desc: "Precision haircuts and beards in the heart of Dubai Marina." },
+  { name: "Hair Cut", desc: "Precision haircuts and beards in the heart of Al Karama." },
   { name: "Kids Hair Cut", desc: "Special attention for our younger gentlemen." },
   { name: "Beard Trimming", desc: "Expert beard shaping, lining, and conditioning." },
   { name: "Hair Perm & Styling", desc: "Modern textures and styling for men." },
@@ -134,16 +134,16 @@ const GALLERY = [
 const REVIEWS = [
   {
     quote:
-      "The best fade I've ever had — and I've sat in chairs across London, Riyadh, and New York. Hashtag Barbers Dubai Marina is on another level. The hot towel shave alone is worth the visit.",
+      "The best fade I've ever had — and I've sat in chairs across London, Riyadh, and New York. KANDIAN GENTS SALON Al Karama is on another level. The hot towel shave alone is worth the visit.",
     name: "Khalid A.",
-    where: "Dubai Marina, Dubai",
+    where: "Al Karama, Dubai",
     initial: "K",
   },
   {
     quote:
       "I drive from Business Bay every two weeks just for this place. My barber knows exactly what I want before I even sit down. Sharp, fast, and professional every single time.",
     name: "Marcus T.",
-    where: "Dubai Marina, Dubai",
+    where: "Al Karama, Dubai",
     initial: "M",
   },
 ];
@@ -281,7 +281,7 @@ function GoldButton({
   );
 }
 
-function HashtagBarbers() {
+function KandianGentsSalon() {
   const [location, setLocation] = useState<LocationKey>("ajman");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -513,7 +513,7 @@ function HashtagBarbers() {
         <div style={{ height: 120, marginLeft: 20 }}>
           <img
             src="/hashtagbarberlogo.png"
-            alt="HASHTAG BARBERS Logo"
+            alt="KANDIAN GENTS SALON Logo"
             style={{ height: "100%", width: "auto", display: "block" }}
           />
         </div>
@@ -714,7 +714,7 @@ function HashtagBarbers() {
               <div style={{ height: 90 }}>
                 <img
                   src="/hashtagbarberlogo.png"
-                  alt="HASHTAG BARBERS Logo"
+                  alt="KANDIAN GENTS SALON Logo"
                   style={{ height: "100%", width: "auto", display: "block" }}
                 />
               </div>
@@ -834,8 +834,8 @@ function HashtagBarbers() {
         }}
       >
         <img
-          src="/hastga barber hero.jpeg"
-          alt="Hashtag Barber Hero Background"
+          src="/kandian hero.png"
+          alt="KANDIAN GENTS SALON Hero Background"
           style={{
             position: "absolute",
             inset: 0,
@@ -1008,11 +1008,11 @@ function HashtagBarbers() {
                     lineHeight: 1,
                   }}
                 >
-                  About Hashtag Barbers
+                  About KANDIAN GENTS SALON
                 </h2>
                 {[
-                  "Hashtag Barbers wasn’t built to be just another salon, it was built to be yours.",
-                  "Based in Dubai Marina, internationally trained barbers. One standard: leave looking your sharpest.",
+                  "KANDIAN GENTS SALON wasn’t built to be just another salon, it was built to be yours.",
+                  "Based in Al Karama, internationally trained barbers. One standard: leave looking your sharpest.",
                   "Walk in. Sit down. Leave sharp.",
                 ].map((p, i) => (
                   <p
@@ -1284,10 +1284,10 @@ function HashtagBarbers() {
               {[...Array(3)].map((_, loopIdx) => (
                 <React.Fragment key={loopIdx}>
                   {[
-                    { name: "Gujjar Badsha", initial: "G", location: "Dubai Marina, Dubai", text: "Best experience ever, the staff is very professional and the atmosphere is great." },
-                    { name: "Sufaid cherumoth", initial: "S", location: "Dubai Marina, Dubai", text: "Highly recommended for anyone looking for a precision cut in Dubai." },
-                    { name: "Frank Lin", initial: "F", location: "Dubai Marina, Dubai", text: "Great experience with Davido. He really knows how to style according to face shape." },
-                    { name: "James Wilson", initial: "J", location: "Dubai Marina, Dubai", text: "Premium products and excellent service. Worth every dirham." }
+                    { name: "Gujjar Badsha", initial: "G", location: "Al Karama, Dubai", text: "Best experience ever, the staff is very professional and the atmosphere is great." },
+                    { name: "Sufaid cherumoth", initial: "S", location: "Al Karama, Dubai", text: "Highly recommended for anyone looking for a precision cut in Dubai." },
+                    { name: "Frank Lin", initial: "F", location: "Al Karama, Dubai", text: "Great experience with Davido. He really knows how to style according to face shape." },
+                    { name: "James Wilson", initial: "J", location: "Al Karama, Dubai", text: "Premium products and excellent service. Worth every dirham." }
                   ].map((rev, idx) => (
                     <div key={`${loopIdx}-${idx}`} style={{
                       flex: isMobile ? "0 0 85%" : "0 0 380px",
@@ -1433,7 +1433,7 @@ function HashtagBarbers() {
             })}
           </div>
           <a
-            href="https://www.instagram.com/hashtag__barbers"
+            href="https://www.instagram.com/kandian__gents__salon"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -1452,7 +1452,7 @@ function HashtagBarbers() {
           >
             <Instagram size={18} color="#D4AF37" />
             <span>Follow our work on Instagram</span>
-            <span style={{ color: "#D4AF37", fontWeight: 600 }}>@hashtag__barbers</span>
+            <span style={{ color: "#D4AF37", fontWeight: 600 }}>@kandian__gents__salon</span>
             <ArrowRight size={14} color="#D4AF37" />
           </a>
         </div>
@@ -1670,7 +1670,7 @@ function HashtagBarbers() {
               lineHeight: 1.05,
             }}
           >
-            NEW TO HASHTAG BARBERS? 20% OFF YOUR FIRST CUT
+            NEW TO KANDIAN GENTS SALON? 20% OFF YOUR FIRST CUT
           </h2>
           <p
             style={{
@@ -1755,13 +1755,13 @@ function HashtagBarbers() {
                     margin: "16px 0 24px",
                   }}
                 >
-                  VISIT HASHTAG BARBERS
+                  VISIT KANDIAN GENTS SALON
                 </h2>
 
                 <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 18 }}>
                   {[
-                    { Icon: MapPin, color: "#D4AF37", text: loc.address },
-                    { Icon: Phone, color: "#D4AF37", text: loc.phone },
+                    { Icon: MapPin, color: "#D4AF37", text: "Al Khazna Centre - Al Karama - Dubai" },
+                    { Icon: Phone, color: "#D4AF37", text: "0557204456" },
                     { Icon: Clock, color: "#D4AF37", text: loc.hours },
                     {
                       Icon: MessageCircle,
@@ -1777,7 +1777,7 @@ function HashtagBarbers() {
                 </div>
                 <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
                   <button
-                    onClick={() => window.location.href = `tel:${loc.phone.replace(/\s/g, '')}`}
+                    onClick={() => window.location.href = `tel:0557204456`}
                     style={{
                       background: "#D4AF37",
                       color: "#111",
@@ -1830,7 +1830,7 @@ function HashtagBarbers() {
               >
                 <iframe
                   key={location}
-                  title={`Hashtag Barbers ${loc.label} — Google Map`}
+                  title={`KANDIAN GENTS SALON ${loc.label} — Google Map`}
                   src={
                     loc.mapEmbedSrc ??
                     googleMapsEmbedSrc(
@@ -1873,7 +1873,7 @@ function HashtagBarbers() {
                 className="bebas"
                 style={{ fontSize: 30, color: "#D4AF37", letterSpacing: "0.2em" }}
               >
-                HASHTAG BARBERS
+                KANDIAN GENTS SALON
               </div>
               <div
                 style={{
@@ -1931,9 +1931,9 @@ function HashtagBarbers() {
               {
                 title: "GET IN TOUCH",
                 items: [
-                  "Dubai Marina Sail Tower - Shop #1 - Dubai Marina - Dubai",
-                  loc.phone,
-                  "hello@hashtagbarbers.com",
+                  "Al Khazna Centre - Al Karama - Dubai",
+                  "0557204456",
+                  "hello@kandiangentssalon.com",
                   "Sat–Sun: 9am – 10pm",
                 ],
               },
@@ -1980,7 +1980,7 @@ function HashtagBarbers() {
               color: "#444",
             }}
           >
-            <div>© 2026 HASHTAG BARBERS. All Rights Reserved.</div>
+            <div>© 2026 KANDIAN GENTS SALON. All Rights Reserved.</div>
             <div style={{ display: "flex", gap: 16 }}>
               <span className="footer-link" style={{ cursor: "pointer", transition: "color 0.3s" }}>
                 Privacy Policy
@@ -2088,7 +2088,7 @@ function BookingModal({
   });
   const times = ["10:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"];
 
-  const summary = `Booking at Hashtag Barbers ${LOCATIONS[location].label}\nService: ${service}\nBarber: ${barber}\nDate: ${date}\nTime: ${time}\nName: ${name}\nPhone: ${phone}`;
+  const summary = `Booking at KANDIAN GENTS SALON ${LOCATIONS[location].label}\nService: ${service}\nBarber: ${barber}\nDate: ${date}\nTime: ${time}\nName: ${name}\nPhone: ${phone}`;
   const waLink = `https://wa.me/${LOCATIONS[location].whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(summary)}`;
 
   return (
@@ -2421,7 +2421,7 @@ function BookingModal({
                         lineHeight: 2,
                       }}
                     >
-                      <div><b>Location:</b> Hashtag Barbers {LOCATIONS[location].label}</div>
+                      <div><b>Location:</b> KANDIAN GENTS SALON {LOCATIONS[location].label}</div>
                       <div><b>Service:</b> {service}</div>
                       <div><b>Barber:</b> {barber}</div>
                       <div><b>Date:</b> {date} @ {time}</div>

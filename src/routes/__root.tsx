@@ -72,22 +72,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hashtag Barbers" },
+      { title: "KANDIAN GENTS SALON" },
       {
         name: "description",
         content:
-          "Premium salon in Dubai offering modern cuts, grooming, and professional barber services.",
+          "Premium salon offering modern cuts, grooming, and professional barber services.",
       },
-      { name: "author", content: "Hashtag Barbers" },
-      { property: "og:title", content: "Hashtag Barbers" },
+      { name: "author", content: "KANDIAN GENTS SALON" },
+      { property: "og:title", content: "KANDIAN GENTS SALON" },
       {
         property: "og:description",
         content:
-          "Premium salon in Dubai offering modern cuts, grooming, and professional barber services.",
+          "Premium salon offering modern cuts, grooming, and professional barber services.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@hashtagbarbers" },
+      { name: "twitter:site", content: "@kandiangentssalon" },
     ],
     links: [
       {
