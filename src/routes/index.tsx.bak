@@ -263,9 +263,9 @@ function GoldButton({
         fontWeight: 600,
         letterSpacing: "0.18em",
         textTransform: "uppercase",
-        background: outlined ? "transparent" : "#3B5C55",
-        color: outlined ? "#3B5C55" : "#ffffff",
-        border: outlined ? "1.5px solid #3B5C55" : "1.5px solid #3B5C55",
+        background: outlined ? "transparent" : "#D4AF37",
+        color: outlined ? "#D4AF37" : "#111111",
+        border: outlined ? "1.5px solid #D4AF37" : "1.5px solid #D4AF37",
         borderRadius: 2,
         cursor: "pointer",
         transition: "all 0.3s ease",
@@ -415,12 +415,12 @@ function KandianGentsSalon() {
       body { margin:0; font-family: 'Inter', sans-serif; background:#111; color:#E8E0D5; }
       * { box-sizing: border-box; }
       .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
-      .eyebrow { font-family:'Inter',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.28em; color:#3B5C55; font-weight:500; }
+      .eyebrow { font-family:'Inter',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.28em; color:#D4AF37; font-weight:500; }
       .ws-nav-link { position:relative; display:inline-block; padding:6px 0; color:#E8E0D5; text-decoration:none; font-size:14px; letter-spacing:0.05em; font-family:'Inter',sans-serif; transition:color 0.3s ease; cursor:pointer;}
-      .ws-nav-link::after { content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:#3B5C55; transition: width 0.3s ease;}
-      .ws-nav-link:hover { color:#3B5C55; }
+      .ws-nav-link::after { content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:#D4AF37; transition: width 0.3s ease;}
+      .ws-nav-link:hover { color:#D4AF37; }
       .ws-nav-link:hover::after { width:100%; }
-      .ws-btn[data-outlined="1"]:hover { background:#3B5C55 !important; color:#ffffff !important; }
+      .ws-btn[data-outlined="1"]:hover { background:#D4AF37 !important; color:#111111 !important; }
       .ws-btn[data-outlined="0"]:hover { background:#8B6914 !important; }
       @keyframes ws-bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
       @keyframes ws-shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
@@ -430,8 +430,8 @@ function KandianGentsSalon() {
       .service-card:hover .service-img { transform:scale(1.05); }
       .gallery-item:hover .gallery-img { transform:scale(1.04); }
       .gallery-item:hover .gallery-overlay { opacity:1; }
-      .barber-img-wrap:hover img { outline:2px solid #3B5C55; outline-offset:6px; }
-      .footer-link:hover { color:#3B5C55 !important; }
+      .barber-img-wrap:hover img { outline:2px solid #D4AF37; outline-offset:6px; }
+      .footer-link:hover { color:#D4AF37 !important; }
       .social-icon:hover { color:#fff !important; transform:scale(1.1); }
       .ws-section { padding: 100px 0; }
       .ws-container { max-width:1200px; margin:0 auto; padding: 0 40px; }
@@ -577,7 +577,7 @@ function KandianGentsSalon() {
                           marginBottom: s.sub ? 8 : 0,
                           cursor: "pointer"
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.color = "#3B5C55"}
+                        onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"}
                         onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
                       >
                         {s.name}
@@ -592,7 +592,7 @@ function KandianGentsSalon() {
                                 setActiveDropdown(null);
                               }}
                               style={{ fontSize: 11, color: "#888", cursor: "pointer", transition: "color 0.2s" }}
-                              onMouseEnter={(e) => e.currentTarget.style.color = "#3B5C55"}
+                              onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"}
                               onMouseLeave={(e) => e.currentTarget.style.color = "#888"}
                             >
                               {sub}
@@ -634,7 +634,7 @@ function KandianGentsSalon() {
                         cursor: "pointer",
                         transition: "color 0.2s"
                       }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = "#3B5C55"}
+                      onMouseEnter={(e) => e.currentTarget.style.color = "#D4AF37"}
                       onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
                     >
                       {s.name}
@@ -653,9 +653,9 @@ function KandianGentsSalon() {
           <button
             onClick={() => openBook()}
             style={{
-              border: "2px solid #3B5C55",
+              border: "1.5px solid #D4AF37",
               background: "transparent",
-              color: "#3B5C55",
+              color: "#D4AF37",
               padding: "10px 22px",
               fontSize: 11,
               letterSpacing: "0.18em",
@@ -666,13 +666,13 @@ function KandianGentsSalon() {
               gap: 8,
               transition: "all 0.3s ease",
               fontFamily: "Inter",
-              fontWeight: 800,
+              fontWeight: 600,
             }}
           >
             <span
               style={{
-                width: 8,
-                height: 8,
+                width: 6,
+                height: 6,
                 borderRadius: "50%",
                 background: "#25D366",
                 display: "inline-block",
@@ -685,7 +685,7 @@ function KandianGentsSalon() {
         <button
           className="mobile-only"
           onClick={() => setMobileOpen(true)}
-          style={{ background: "transparent", border: "none", color: "#3B5C55", cursor: "pointer" }}
+          style={{ background: "transparent", border: "none", color: "#D4AF37", cursor: "pointer" }}
           aria-label="Open menu"
         >
           <Menu size={28} />
@@ -770,7 +770,7 @@ function KandianGentsSalon() {
                     <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 15 }}>
                       {SUB_SERVICES.map((s) => (
                         <div key={s.name}>
-                          <div style={{ fontSize: 16, color: "#3B5C55", fontWeight: 600 }}>{s.name}</div>
+                          <div style={{ fontSize: 16, color: "#D4AF37", fontWeight: 600 }}>{s.name}</div>
                           {s.sub && (
                             <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 6 }}>
                               {s.sub.map((sub) => (
@@ -786,7 +786,7 @@ function KandianGentsSalon() {
                   {l.dropdownKey === "priceList" && activeDropdown === l.dropdownKey && (
                     <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 15 }}>
                       {PRICE_LIST_SUB.map((s) => (
-                        <div key={s.name} style={{ fontSize: 24, color: "#3B5C55" }}>{s.name}</div>
+                        <div key={s.name} style={{ fontSize: 24, color: "#D4AF37" }}>{s.name}</div>
                       ))}
                     </div>
                   )}
@@ -802,8 +802,8 @@ function KandianGentsSalon() {
                 openBook();
               }}
               style={{
-                background: "#3B5C55",
-                color: "#fff",
+                background: "#D4AF37",
+                color: "#111",
                 border: "none",
                 padding: "18px",
                 fontSize: 13,
@@ -833,12 +833,9 @@ function KandianGentsSalon() {
           paddingBottom: isMobile ? 100 : 120,
         }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <img
+          src="/kandian hero.png"
+          alt="KANDIAN GENTS SALON Hero Background"
           style={{
             position: "absolute",
             inset: 0,
@@ -846,9 +843,7 @@ function KandianGentsSalon() {
             height: "100%",
             objectFit: "cover",
           }}
-        >
-          <source src="/kanadian hero video.mp4" type="video/mp4" />
-        </video>
+        />
         <div
           style={{
             position: "absolute",
@@ -948,7 +943,7 @@ function KandianGentsSalon() {
       </section>
 
       {/* GOLD STATS BAR */}
-      <section style={{ background: "#3B5C55", padding: "10px 40px" }}>
+      <section style={{ background: "#D4AF37", padding: "10px 40px" }}>
         <div
           style={{
             maxWidth: 1200,
@@ -970,7 +965,7 @@ function KandianGentsSalon() {
                 borderRight: !isMobile && i < 2 ? "1px solid rgba(255,255,255,0.4)" : "none",
               }}
             >
-              <div className="bebas" style={{ fontSize: 28, color: "#fff" }}>
+              <div className="bebas" style={{ fontSize: 28, color: "#111" }}>
                 {n}
               </div>
               <div
@@ -1040,8 +1035,8 @@ function KandianGentsSalon() {
                     <span
                       key={t}
                       style={{
-                        border: "1px solid #3B5C55",
-                        color: "#3B5C55",
+                        border: "1px solid #D4AF37",
+                        color: "#D4AF37",
                         padding: "8px 20px",
                         fontSize: 10,
                         textTransform: "uppercase",
@@ -1061,7 +1056,7 @@ function KandianGentsSalon() {
                   width: "100%",
                   height: isMobile ? 300 : 540,
                   objectFit: "cover",
-                  outline: "1px solid #3B5C55",
+                  outline: "1px solid #D4AF37",
                   outlineOffset: isMobile ? 10 : 14,
                 }}
               />
@@ -1207,7 +1202,7 @@ function KandianGentsSalon() {
                     <button
                       onClick={() => openBook(s.name)}
                       style={{
-                        background: "#3B5C55",
+                        background: "#D4AF37",
                         color: "#fff",
                         border: "none",
                         padding: "10px 20px",
@@ -1234,7 +1229,7 @@ function KandianGentsSalon() {
             <h2 className="bebas" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "#fff", marginBottom: 15 }}>
               WHAT OUR CUSTOMERS SAY
             </h2>
-            <div style={{ width: 60, height: 2, background: "#3B5C55", margin: "0 auto 20px" }} />
+            <div style={{ width: 60, height: 2, background: "#D4AF37", margin: "0 auto 20px" }} />
             <p style={{ color: "#888", fontSize: 15, maxWidth: 700, margin: "0 auto", lineHeight: 1.6 }}>
               With 4 Google Reviews and a 5.0 rating our professional barbers guarantee unmatched
               satisfaction in every service. Here's what our guys say.  </p>
@@ -1292,13 +1287,13 @@ function KandianGentsSalon() {
                     <div key={`${loopIdx}-${idx}`} style={{
                       flex: isMobile ? "0 0 85%" : "0 0 380px",
                       background: "#1A1A1A", padding: "40px",
-                      display: "flex", flexDirection: "column", gap: 25, borderTop: "4px solid #3B5C55",
+                      display: "flex", flexDirection: "column", gap: 25, borderTop: "4px solid #D4AF37",
                       position: "relative"
                     }}>
                       <div style={{ display: "flex", gap: 4, marginBottom: -10 }}>
-                        {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#3B5C55" color="#3B5C55" />)}
+                        {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#D4AF37" color="#D4AF37" />)}
                       </div>
-                      <Quote size={32} color="#3B5C55" style={{ opacity: 0.8 }} />
+                      <Quote size={32} color="#D4AF37" style={{ opacity: 0.8 }} />
                       <p style={{
                         fontSize: 16, color: "#eee", lineHeight: 1.8, margin: 0,
                         fontStyle: "italic", fontWeight: 300
@@ -1307,7 +1302,7 @@ function KandianGentsSalon() {
                       </p>
                       <div style={{ marginTop: "auto", display: "flex", gap: 15, alignItems: "center" }}>
                         <div style={{
-                          width: 40, height: 40, borderRadius: "50%", background: "#3B5C55",
+                          width: 40, height: 40, borderRadius: "50%", background: "#D4AF37",
                           display: "flex", alignItems: "center", justifyContent: "center",
                           color: "#000", fontWeight: "bold", fontSize: 14
                         }}>
@@ -1329,7 +1324,7 @@ function KandianGentsSalon() {
 
           <div style={{
             display: "flex", alignItems: "center", justifyContent: "center",
-            gap: isMobile ? 15 : 40, marginTop: 50, color: "#3B5C55",
+            gap: isMobile ? 15 : 40, marginTop: 50, color: "#D4AF37",
             fontSize: isMobile ? 10 : 13, fontWeight: 700, letterSpacing: "0.2em"
           }}>
             <span>5 / 5 ON GOOGLE</span>
@@ -1450,10 +1445,10 @@ function KandianGentsSalon() {
             onMouseEnter={(e) => e.currentTarget.style.opacity = "0.8"}
             onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
           >
-            <Instagram size={18} color="#3B5C55" />
+            <Instagram size={18} color="#D4AF37" />
             <span>Follow our work on Instagram</span>
-            <span style={{ color: "#3B5C55", fontWeight: 600 }}>@kandian__gents__salon</span>
-            <ArrowRight size={14} color="#3B5C55" />
+            <span style={{ color: "#D4AF37", fontWeight: 600 }}>@kandian__gents__salon</span>
+            <ArrowRight size={14} color="#D4AF37" />
           </a>
         </div>
       </section>
@@ -1496,7 +1491,7 @@ function KandianGentsSalon() {
                 desc: "Your everyday sharp-up, done right.",
                 items: PRICING.essentials,
                 bg: "#1A1A1A",
-                accent: "#3B5C55",
+                accent: "#D4AF37",
                 light: false,
               },
               {
@@ -1504,9 +1499,9 @@ function KandianGentsSalon() {
                 priceD: "from AED 150",
                 desc: "Our most popular grooming combos — cut, beard, ritual.",
                 items: PRICING.signature,
-                bg: "#3B5C55",
-                accent: "#fff",
-                light: false,
+                bg: "#D4AF37",
+                accent: "#111",
+                light: true,
                 popular: true,
               },
               {
@@ -1515,7 +1510,7 @@ function KandianGentsSalon() {
                 desc: "Full transformations and specialist men's treatments.",
                 items: PRICING.premium,
                 bg: "#1A1A1A",
-                accent: "#3B5C55",
+                accent: "#D4AF37",
                 light: false,
                 bordered: true,
               },
@@ -1525,7 +1520,7 @@ function KandianGentsSalon() {
                 style={{
                   background: card.bg,
                   padding: "48px 40px",
-                  border: card.bordered ? "1px solid #3B5C55" : "1px solid #2A2A2A",
+                  border: card.bordered ? "1px solid #D4AF37" : "1px solid #2A2A2A",
                   position: "relative",
                 }}
               >
@@ -1550,7 +1545,7 @@ function KandianGentsSalon() {
                 <div
                   style={{
                     fontSize: 11,
-                    color: card.light ? "#111" : "#3B5C55",
+                    color: card.light ? "#111" : "#D4AF37",
                     textTransform: "uppercase",
                     letterSpacing: "0.25em",
                     fontWeight: 600,
@@ -1603,7 +1598,7 @@ function KandianGentsSalon() {
                     <span>{name}</span>
                     <span
                       style={{
-                        color: card.light ? "#111" : "#3B5C55",
+                        color: card.light ? "#111" : "#D4AF37",
                         fontWeight: 600,
                         whiteSpace: "nowrap",
                       }}
@@ -1613,34 +1608,27 @@ function KandianGentsSalon() {
                   </div>
                 ))}
                 <div style={{ marginTop: 28 }}>
-                  {card.title === "SIGNATURE" ? (
+                  {card.light ? (
                     <button
                       onClick={() => openBook()}
                       style={{
-                        background: "#ffffff",
-                        color: "#3B5C55",
+                        background: "#111",
+                        color: "#fff",
                         border: "none",
                         padding: "14px 28px",
                         fontSize: 11,
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
-                        fontWeight: 700,
+                        fontWeight: 600,
                         cursor: "pointer",
                         width: "100%",
                         fontFamily: "Inter",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = "#F5F0E8";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "#ffffff";
                       }}
                     >
                       BOOK NOW
                     </button>
                   ) : (
-                    <GoldButton onClick={() => openBook()} full>
+                    <GoldButton outlined onClick={() => openBook()} full>
                       BOOK NOW
                     </GoldButton>
                   )}
@@ -1652,7 +1640,94 @@ function KandianGentsSalon() {
         </div>
       </section>
 
-
+      {/* OFFER BANNER */}
+      <section
+        style={{
+          minHeight: 300,
+          padding: "60px 20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          background:
+            "linear-gradient(135deg, #5C3D0A 0%, #D4AF37 50%, #5C3D0A 100%)",
+          backgroundSize: "200% 200%",
+          animation: "ws-shimmer 6s infinite",
+        }}
+      >
+        <div style={{ maxWidth: 900 }}>
+          <h2
+            className="bebas"
+            style={{
+              fontSize: "clamp(40px, 6vw, 72px)",
+              color: "#fff",
+              margin: 0,
+              lineHeight: 1.05,
+            }}
+          >
+            NEW TO KANDIAN GENTS SALON? 20% OFF YOUR FIRST CUT
+          </h2>
+          <p
+            style={{
+              fontSize: 14,
+              color: "rgba(255,255,255,0.85)",
+              marginTop: 18,
+              lineHeight: 1.7,
+            }}
+          >
+            Valid for new male clients at our Dubai salon. No code needed —
+            just mention it when you WhatsApp to book your chair.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 16,
+              marginTop: 32,
+              flexWrap: "wrap",
+            }}
+          >
+            <button
+              onClick={() => openBook()}
+              style={{
+                background: "#111",
+                color: "#fff",
+                border: "none",
+                padding: "15px 36px",
+                fontSize: 11,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                fontWeight: 600,
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+                fontFamily: "Inter",
+              }}
+            >
+              <MessageCircle size={16} color="#25D366" />
+              BOOK ON WHATSAPP
+            </button>
+            <button
+              onClick={() => window.location.href = `tel:${loc.phone.replace(/\s/g, '')}`}
+              style={{
+                background: "transparent",
+                color: "#fff",
+                border: "1.5px solid #fff",
+                padding: "15px 36px",
+                fontSize: 11,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                fontWeight: 600,
+                cursor: "pointer",
+                fontFamily: "Inter",
+              }}
+            >
+              CALL TO BOOK
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* LOCATIONS & CONTACT */}
       <section id="contact" className="ws-section" style={{ background: "#F5F0E8", color: "#3D3D3D" }}>
@@ -1666,7 +1741,7 @@ function KandianGentsSalon() {
               }}
             >
               <div>
-
+                <div className="eyebrow">FIND US</div>
                 <h2
                   className="bebas"
                   style={{
@@ -1680,9 +1755,9 @@ function KandianGentsSalon() {
 
                 <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 18 }}>
                   {[
-                    { Icon: MapPin, color: "#3B5C55", text: "Al Khazna Centre - Al Karama - Dubai" },
-                    { Icon: Phone, color: "#3B5C55", text: "0557204456" },
-                    { Icon: Clock, color: "#3B5C55", text: loc.hours },
+                    { Icon: MapPin, color: "#D4AF37", text: "Al Khazna Centre - Al Karama - Dubai" },
+                    { Icon: Phone, color: "#D4AF37", text: "0557204456" },
+                    { Icon: Clock, color: "#D4AF37", text: loc.hours },
                     {
                       Icon: MessageCircle,
                       color: "#25D366",
@@ -1699,8 +1774,8 @@ function KandianGentsSalon() {
                   <button
                     onClick={() => window.location.href = `tel:0557204456`}
                     style={{
-                      background: "#3B5C55",
-                      color: "#fff",
+                      background: "#D4AF37",
+                      color: "#111",
                       border: "none",
                       padding: "14px 28px",
                       fontSize: 11,
@@ -1720,8 +1795,8 @@ function KandianGentsSalon() {
                     }
                     style={{
                       background: "transparent",
-                      color: "#3B5C55",
-                      border: "1.5px solid #3B5C55",
+                      color: "#D4AF37",
+                      border: "1.5px solid #D4AF37",
                       padding: "14px 28px",
                       fontSize: 11,
                       letterSpacing: "0.18em",
@@ -1743,7 +1818,7 @@ function KandianGentsSalon() {
                   height: 420,
                   minHeight: 380,
                   background: "#E5E3DF",
-                  border: "1px solid #3B5C55",
+                  border: "1px solid #D4AF37",
                   overflow: "hidden",
                   position: "relative",
                 }}
@@ -1791,7 +1866,7 @@ function KandianGentsSalon() {
             <div>
               <div
                 className="bebas"
-                style={{ fontSize: 30, color: "#3B5C55", letterSpacing: "0.2em" }}
+                style={{ fontSize: 30, color: "#D4AF37", letterSpacing: "0.2em" }}
               >
                 KANDIAN GENTS SALON
               </div>
@@ -1815,7 +1890,7 @@ function KandianGentsSalon() {
                     key={i}
                     size={18}
                     className="social-icon"
-                    color="#3B5C55"
+                    color="#D4AF37"
                     style={{ cursor: "pointer", transition: "all 0.3s ease" }}
                   />
                 ))}
@@ -1862,7 +1937,7 @@ function KandianGentsSalon() {
                 <div
                   style={{
                     fontSize: 11,
-                    color: "#3B5C55",
+                    color: "#D4AF37",
                     textTransform: "uppercase",
                     letterSpacing: "0.25em",
                     fontWeight: 600,
@@ -1913,63 +1988,36 @@ function KandianGentsSalon() {
         </div>
       </footer>
 
-      {/* FLOATING CONTACT BUTTONS */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 24,
-          right: 20,
-          display: "flex",
-          flexDirection: "column",
-          gap: 12,
-          zIndex: 999,
-        }}
-      >
-        {/* WhatsApp Button */}
-        <a
-          href="https://wa.me/971557204456"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* FLOATING WHATSAPP */}
+      {isMobile && (
+        <button
+          onClick={() => openBook()}
           style={{
-            width: 56,
-            height: 56,
-            borderRadius: "50%",
+            position: "fixed",
+            bottom: 24,
+            right: 20,
             background: "#25D366",
-            display: "flex",
+            color: "#fff",
+            border: "none",
+            borderRadius: 50,
+            padding: "13px 22px",
+            display: "inline-flex",
             alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+            gap: 8,
+            fontSize: 12,
+            textTransform: "uppercase",
+            letterSpacing: "0.15em",
+            fontWeight: 600,
             cursor: "pointer",
-            transition: "transform 0.2s ease",
+            zIndex: 999,
             animation: "ws-pulse 2.5s infinite",
+            fontFamily: "Inter",
           }}
-          onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.08)"}
-          onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
         >
-          <MessageCircle size={28} color="#fff" />
-        </a>
-
-        {/* Call Button */}
-        <a
-          href="tel:0557204456"
-          style={{
-            width: 56,
-            height: 56,
-            borderRadius: "50%",
-            background: "#34B7F1",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-            cursor: "pointer",
-            transition: "transform 0.2s ease",
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.08)"}
-          onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
-        >
-          <Phone size={24} color="#fff" />
-        </a>
-      </div>
+          <MessageCircle size={18} />
+          BOOK NOW
+        </button>
+      )}
 
       {/* BOOKING MODAL */}
       <BookingModal
@@ -2063,14 +2111,14 @@ function BookingModal({
             exit={{ scale: 0.95, y: 30 }}
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: step === 4 ? "#3B5C55" : "#1A1A1A",
-              color: "#fff",
+              background: step === 4 ? "#D4AF37" : "#1A1A1A",
+              color: step === 4 ? "#111" : "#fff",
               maxWidth: 560,
               width: "100%",
               maxHeight: "90vh",
               overflowY: "auto",
               padding: "40px 36px",
-              border: "1px solid #3B5C55",
+              border: "1px solid #D4AF37",
               position: "relative",
             }}
           >
@@ -2082,7 +2130,7 @@ function BookingModal({
                 right: 16,
                 background: "transparent",
                 border: "none",
-                color: step === 4 ? "#fff" : "#3B5C55",
+                color: step === 4 ? "#111" : "#D4AF37",
                 cursor: "pointer",
               }}
             >
@@ -2113,8 +2161,8 @@ function BookingModal({
                           width: "100%",
                           textAlign: "left",
                           padding: "16px 20px",
-                          background: service === s.name ? "#3B5C55" : "transparent",
-                          color: service === s.name ? "#fff" : "#E8E0D5",
+                          background: service === s.name ? "#D4AF37" : "transparent",
+                          color: service === s.name ? "#111" : "#E8E0D5",
                           border: "1px solid #333",
                           marginBottom: 8,
                           cursor: "pointer",
@@ -2144,8 +2192,8 @@ function BookingModal({
                           width: "100%",
                           textAlign: "left",
                           padding: "16px 20px",
-                          background: barber === n ? "#3B5C55" : "transparent",
-                          color: barber === n ? "#fff" : "#E8E0D5",
+                          background: barber === n ? "#D4AF37" : "transparent",
+                          color: barber === n ? "#111" : "#E8E0D5",
                           border: "1px solid #333",
                           marginBottom: 8,
                           cursor: "pointer",
@@ -2181,8 +2229,8 @@ function BookingModal({
                             onClick={() => setDate(label)}
                             style={{
                               padding: "10px 4px",
-                              background: sel ? "#3B5C55" : "#222",
-                              color: sel ? "#fff" : "#E8E0D5",
+                              background: sel ? "#D4AF37" : "#222",
+                              color: sel ? "#111" : "#E8E0D5",
                               border: "none",
                               cursor: "pointer",
                               fontSize: 11,
@@ -2210,8 +2258,8 @@ function BookingModal({
                             onClick={() => setTime(t)}
                             style={{
                               padding: 12,
-                              background: sel ? "#3B5C55" : "#222",
-                              color: sel ? "#fff" : "#E8E0D5",
+                              background: sel ? "#D4AF37" : "#222",
+                              color: sel ? "#111" : "#E8E0D5",
                               border: "none",
                               cursor: "pointer",
                               fontSize: 13,
@@ -2231,8 +2279,8 @@ function BookingModal({
                           flex: 1,
                           padding: "14px",
                           background: "transparent",
-                          color: "#3B5C55",
-                          border: "1px solid #3B5C55",
+                          color: "#D4AF37",
+                          border: "1px solid #D4AF37",
                           cursor: "pointer",
                           textTransform: "uppercase",
                           letterSpacing: "0.15em",
@@ -2247,8 +2295,8 @@ function BookingModal({
                         style={{
                           flex: 2,
                           padding: "14px",
-                          background: !date || !time ? "#444" : "#3B5C55",
-                          color: "#fff",
+                          background: !date || !time ? "#444" : "#D4AF37",
+                          color: "#111",
                           border: "none",
                           cursor: !date || !time ? "not-allowed" : "pointer",
                           textTransform: "uppercase",
@@ -2321,8 +2369,8 @@ function BookingModal({
                           flex: 1,
                           padding: 14,
                           background: "transparent",
-                          color: "#3B5C55",
-                          border: "1px solid #3B5C55",
+                          color: "#D4AF37",
+                          border: "1px solid #D4AF37",
                           cursor: "pointer",
                           textTransform: "uppercase",
                           letterSpacing: "0.15em",
@@ -2337,8 +2385,8 @@ function BookingModal({
                         style={{
                           flex: 2,
                           padding: 14,
-                          background: !name || !phone ? "#444" : "#3B5C55",
-                          color: "#fff",
+                          background: !name || !phone ? "#444" : "#D4AF37",
+                          color: "#111",
                           border: "none",
                           cursor: !name || !phone ? "not-allowed" : "pointer",
                           textTransform: "uppercase",
@@ -2354,17 +2402,17 @@ function BookingModal({
                 )}
                 {step === 4 && (
                   <div style={{ textAlign: "center" }}>
-                    <h3 className="bebas" style={{ fontSize: 48, color: "#fff", margin: "10px 0 20px" }}>
+                    <h3 className="bebas" style={{ fontSize: 48, color: "#111", margin: "10px 0 20px" }}>
                       YOUR CHAIR IS RESERVED.
                     </h3>
                     <div
                       style={{
-                        background: "rgba(255,255,255,0.08)",
+                        background: "rgba(0,0,0,0.08)",
                         padding: 20,
                         marginBottom: 24,
                         textAlign: "left",
                         fontSize: 14,
-                        color: "#fff",
+                        color: "#111",
                         lineHeight: 2,
                       }}
                     >
