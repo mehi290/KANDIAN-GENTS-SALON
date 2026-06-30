@@ -501,7 +501,7 @@ function KandianGentsSalon() {
           left: 0,
           right: 0,
           zIndex: 1000,
-          padding: "18px 40px",
+          padding: isMobile ? "10px 16px" : "12px 40px",
           background: scrolled ? "#111111" : "transparent",
           boxShadow: scrolled ? "0 2px 30px rgba(0,0,0,0.5)" : "none",
           transition: "all 0.35s ease",
@@ -510,7 +510,7 @@ function KandianGentsSalon() {
           justifyContent: "space-between",
         }}
       >
-        <div style={{ height: 120, marginLeft: 20 }}>
+        <div style={{ height: isMobile ? 60 : 80, marginLeft: isMobile ? 0 : 20 }}>
           <img
             src="/kanadian logo.png"
             alt="KANDIAN GENTS SALON Logo"
